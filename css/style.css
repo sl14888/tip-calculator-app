@@ -1,0 +1,240 @@
+@import url('https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;700&display=swap');
+
+* {
+  box-sizing: border-box;
+}
+
+:root {
+  /*color*/
+  --cyan-600: hsl(172, 67%, 45%);
+  --cyan-500: hsl(183, 100%, 15%);
+  --cyan-400: hsl(186, 14%, 43%);
+  --cyan-300: hsl(184, 14%, 56%);
+  --cyan-200: hsl(185, 41%, 84%);
+  --cyan-100: hsl(189, 41%, 97%);
+  --white-500: hsl(0, 0%, 100%);
+
+  /*typography*/
+  --family: 'Space Mono', monospace;
+  --fs-base: 24px;
+  --weight-light: 400;
+  --weight-bold: 700;
+
+  /*typography*/
+  --radii: 1.5rem;
+}
+
+body {
+  margin: 0;
+  background-color: var(--cyan-200);
+  font-family: var(--family);
+  font-size: var(--fs-base);
+  color: var(--cyan-400);
+}
+
+.attribution {
+  margin: 10px 0;
+  font-size: 11px;
+  text-align: center;
+}
+.attribution a {
+  color: hsl(228, 45%, 44%);
+}
+
+.splitter {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+.logo__img {
+  margin: 35px 0;
+}
+
+.splitter__content {
+  display: flex;
+  flex-wrap: wrap;
+  background-color: var(--white-500);
+  border-radius: var(--radii);
+  padding: 20px 30px;
+  max-width: 400px;
+  margin: 0 auto;
+  justify-content: center;
+}
+
+.splitter__title {
+  margin: 0;
+  margin-top: 20px;
+  margin-bottom: 10px;
+  width: 100%;
+  font-size: 18px;
+  font-weight: var(--weight-bold);
+}
+
+.splitter__check {
+  position: relative;
+}
+
+.splitter__input {
+  width: 100%;
+  background-color: var(--cyan-100);
+  border: none;
+  padding: 10px;
+  color: var(--cyan-500);
+  outline: none;
+  font-size: 24px;
+  text-align: right;
+  font-weight: var(--weight-bold);
+}
+
+.splitter__input-img {
+  position: absolute;
+  left: 15px;
+  bottom: 15px;
+}
+
+.splitter__selects {
+  display: flex;
+  flex-direction: column;
+}
+
+.splitter__item {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+}
+
+.splitter__btn {
+  border: none;
+  border-radius: 4px;
+  max-width: 150px;
+  height: 50px;
+  background-color: var(--cyan-500);
+  color: var(--white-500);
+  font-weight: var(--weight-bold);
+  font-size: 22px;
+  margin-bottom: 5px;
+  cursor: pointer;
+  transition: all 0.3s;
+}
+
+.splitter__btn:nth-child(odd) {
+  margin-right: 5px;
+}
+
+.btn:hover {
+  background-color: var(--cyan-600);
+  color: var(--cyan-500);
+}
+
+.splitter__btn-custom {
+  border: none;
+  outline: none;
+  color: var(--cyan-500);
+  border-radius: 4px;
+  background-color: var(--cyan-100);
+  text-align: center;
+  font-weight: var(--weight-bold);
+  font-size: 22px;
+  max-width: 150px;
+  height: 50px;
+}
+
+.splitter__btn-custom:hover,
+.splitter__input:hover {
+  outline: 2px solid var(--cyan-600);
+}
+
+.splitter__conclusion {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+
+  background-color: var(--cyan-500);
+  border-radius: var(--radii);
+  padding: 25px 30px;
+  margin-top: 30px;
+  width: 100%;
+  max-width: 400px;
+}
+
+.splitter__conclusion__top {
+  margin-top: 25px;
+}
+
+.splitter-tip {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 30px;
+}
+
+.splitter-tip__title {
+  margin: 0;
+  font-size: 18px;
+  font-weight: var(--weight-bold);
+  color: var(--white-500);
+}
+
+.splitter-tip__subtitle {
+  font-size: 16px;
+  margin: 0;
+}
+
+.splitter-tip__result {
+  margin: 0;
+  font-size: 32px;
+  font-weight: var(--weight-bold);
+  color: var(--cyan-600);
+}
+
+.splitter__btn-rest {
+  border: none;
+  text-transform: uppercase;
+  background-color: var(--cyan-600);
+  color: var(--cyan-500);
+  border-radius: 4px;
+  width: 100%;
+  height: 50px;
+  font-weight: var(--weight-bold);
+  font-size: 18px;
+  transition: all 0.3s;
+  cursor: pointer;
+}
+
+.splitter__btn-rest:hover {
+  background-color: var(--cyan-200);
+  color: var(--cyan-500);
+}
+
+@media (min-width: 1024px) {
+  .splitter__content {
+    width: 100%;
+    max-width: 900px;
+    justify-content: space-between;
+  }
+
+  .splitter__conclusion {
+    margin-top: 0;
+  }
+
+  .splitter__settings {
+    width: 50%;
+  }
+
+  .splitter__item {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  .splitter__btn {
+    margin-bottom: 0;
+    margin-right: 5px;
+  }
+
+  .splitter__btn:nth-child(-n + 3) {
+    margin-bottom: 5px;
+  }
+  .splitter__btn:nth-child(3n) {
+    margin-right: 0;
+  }
+}
