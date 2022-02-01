@@ -16,7 +16,13 @@
         <div class="splitter__settings">
           <div class="splitter__check">
             <p class="splitter__title">Bill</p>
-            <input class="splitter__input" type="number" />
+            <input
+              class="splitter__input"
+              data-input-dollar
+              min="0"
+              placeholder="0"
+              type="number"
+            />
             <img
               class="splitter__input-img"
               src="./images/icon-dollar.svg"
@@ -40,7 +46,13 @@
           </div>
           <div class="splitter__check">
             <p class="splitter__title">Number of People</p>
-            <input class="splitter__input" type="number" />
+            <input
+              class="splitter__input"
+              data-input-people
+              min="0"
+              placeholder="0"
+              type="number"
+            />
             <img
               class="splitter__input-img"
               src="./images/icon-person.svg"
@@ -55,14 +67,14 @@
                 <p class="splitter-tip__title">Tip Amount</p>
                 <p class="splitter-tip__subtitle">/ person</p>
               </div>
-              <div class="splitter-tip__result">$0.00</div>
+              <div class="splitter-tip__result" id="tipAmount">$<span>0.00</span></div>
             </div>
             <div class="splitter-tip">
               <div class="splitter-tip__item">
                 <p class="splitter-tip__title">Total</p>
                 <p class="splitter-tip__subtitle">/ person</p>
               </div>
-              <div class="splitter-tip__result">$0.00</div>
+              <div class="splitter-tip__result" id="total">$<span>0.00</span></div>
             </div>
           </div>
 
@@ -73,7 +85,7 @@
         Challenge by
         <a href="https://www.frontendmentor.io?ref=challenge" target="_blank"
           >Frontend Mentor</a
-        >. Coded by <a href="#">Your Name Here</a>.
+        >. Coded by <a href="https://github.com/sl14888">Arsenyuk Danil</a>.
       </div>
     </section>
 

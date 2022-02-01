@@ -79,6 +79,7 @@ body {
 
 .splitter__input {
   width: 100%;
+  font-family: var(--family);
   background-color: var(--cyan-100);
   border: none;
   padding: 10px;
@@ -110,13 +111,19 @@ body {
   border-radius: 4px;
   max-width: 150px;
   height: 50px;
+  font-family: var(--family);
   background-color: var(--cyan-500);
   color: var(--white-500);
   font-weight: var(--weight-bold);
-  font-size: 22px;
+  font-size: 21px;
   margin-bottom: 5px;
   cursor: pointer;
   transition: all 0.3s;
+}
+
+.splitter__btn--active {
+  background-color: var(--cyan-600);
+  color: var(--cyan-500);
 }
 
 .splitter__btn:nth-child(odd) {
@@ -124,7 +131,7 @@ body {
 }
 
 .btn:hover {
-  background-color: var(--cyan-600);
+  background-color: var(--cyan-200);
   color: var(--cyan-500);
 }
 
